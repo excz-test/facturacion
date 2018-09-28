@@ -7,7 +7,7 @@
     padding: 2rem;
     margin: 2rem;
     width: 19rem;
-    height: 30 rem;
+    height: 30rem;
     justify-items: center;
     cursor: pointer;
     border-radius: 1.75rem;
@@ -31,7 +31,7 @@
 
 .body__container {
     align-self: end;
-    display: grid;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-flow: column;

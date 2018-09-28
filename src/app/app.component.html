@@ -2,7 +2,7 @@
 <aside class="side-menu__container" [ngClass]="{'side-menu__container-active': showMenu}" (click)="toggleMenu()">
   <nav class="slide-menu" [ngClass]="{'slide-menu-active': showMenu}" (click)="$event.stopImmediatePropagation();">
     <section class="menu-header">
-      <span class="greeting__text">Welcome Back</span>
+      <span class="greeting__text">Bienvenido</span>
       <div class="profile-image__container">
         <img src="https://cdn.onlinewebfonts.com/svg/img_311319.png" alt="imagen-perfil" class="profile__image">
         <!--https://cdn.onlinewebfonts.com/svg/img_311319.png-->
@@ -16,7 +16,7 @@
       Menu
     </section>
     <section class="menu-footer">
-
+ed
     </section>
   </nav>
 </aside>
@@ -34,12 +34,15 @@
                   fill: #594e78
               }</style>
           </defs>
-          <rect id="Rectangle_9" width="49.9" height="4" class="hamburger__icon__fill" data-name="Rectangle 9" rx="2"
-                transform="translate(31.5 58)"/>
-          <rect id="Rectangle_10" width="49.9" height="4"  class="hamburger__icon__fill" data-name="Rectangle 10" rx="2"
-                transform="translate(31.5 44)"/>
-          <rect id="Rectangle_11" width="49.9" height="4"  class="hamburger__icon__fill" data-name="Rectangle 11" rx="2"
-                transform="translate(31.5 30)"/>
+          <rect id="Rectangle_9" width="49.9" height="4" [ngClass]="{'hamburger__icon__fill-dark': darkModeActive}"
+              class="hamburger__icon__fill" data-name="Rectangle 9" rx="2"
+              transform="translate(31.5 58)"/>
+        <rect id="Rectangle_10" width="49.9" height="4" [ngClass]="{'hamburger__icon__fill-dark': darkModeActive}"
+              class="hamburger__icon__fill" data-name="Rectangle 10" rx="2"
+              transform="translate(31.5 44)"/>
+        <rect id="Rectangle_11" width="49.9" height="4" [ngClass]="{'hamburger__icon__fill-dark': darkModeActive}"
+              class="hamburger__icon__fill" data-name="Rectangle 11" rx="2"
+transform="translate(31.5 30)"/>
       </svg>
       <!--<svg class="logo__icon">
         logo svg code goes here
@@ -50,7 +53,7 @@
         <text [ngClass]="{'logo__text-dark': darkModeActive}" class="logo__text" fill="#432c85"
               font-family="SegoeUI-Semibold,Segoe UI" font-size="30" font-weight="600"
               letter-spacing=".1em" transform="translate(237 56)">
-          <tspan x="0" y="0">Priscila</tspan>
+          <tspan x="0" y="0"></tspan>
         </text>
       </svg>
       <!--
@@ -212,7 +215,7 @@
             </g>
           </svg>-->
     </div>
-    <h3 class="date__text">Hoy</h3>
+    <h3 class="date__text">Priscila Studio</h3>
     <div class="mode-toggle__container">
       <span class="mode-toggle__text">Light</span>
 
@@ -234,7 +237,8 @@
 
   <!--Footer-->
   <footer class="main__footer">
-    <small class="copyright__text">copyright &Aring; 2018 Facturaci&oacute;n</small>
+    <small class="copyright__text" [ngClass]="{'main__footer-dark': darkModeActive}">Copyright &copy; 2018 Facturaci&oacute;n</small>
+    <small class="copyright__text" [ngClass]="{'main__footer-dark': darkModeActive}">{{fechaActual | date:"EEEE, MMMM d,  hh:mm:ss" }} </small>
   </footer>
 
 </div>

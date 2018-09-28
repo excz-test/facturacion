@@ -1,0 +1,25 @@
+.details-page__wrapper-dark-1 {
+    background: linear-gradient(#FC7DB8, #495CFC);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+
+
+  
+  
+  
+  
+  .back__button {
+    position: absolute;
+    top: 2rem;
+    left: 2.25rem;
+    width: 5rem;
+    cursor: pointer;
+    z-index: 3;
+  }

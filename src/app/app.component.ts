@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UiService } from './services/ui.service';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   showMenu = false;
   darkModeActive: boolean;
+  fechaActual: Date;
 
-  constructor(){
-
+  constructor(public ui: UiService){
+    this.fechaActual = new Date();
   }
 
   ngOnInit() {
-   /* this.ui.darkMode.subscribe((value) => {
+    this.ui.darkModeState.subscribe((value) => {
       this.darkModeActive = value;
-    });*/
+    });
   }
 
   toggleMenu() {
@@ -24,6 +26,6 @@ export class AppComponent implements OnInit {
   }
 
   modeToggleSwitch() {
-    //this.ui.darkModeState.next(!this.darkModeActive);
+    this.ui.darkModeState.next(!this.darkModeActive);
   }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { WeatherService } from '../../../services/weather/weather.service';
+import { UiService } from '../../../services/ui.service';
 
 @Component({
   selector: 'app-weather-card',
@@ -23,7 +25,7 @@ export class WeatherCardComponent implements OnInit, OnDestroy {
       this.darkMode = isDark;
     });
 
-    this.weather.getWeatherState('Paris')
+    /*this.weather.getWeatherState('Paris')
       .subscribe((data: string) => {
         this.condition = data;
       });
@@ -37,7 +39,7 @@ export class WeatherCardComponent implements OnInit, OnDestroy {
 
     this.weather.getMaxTemp('Paris').subscribe((data: number) => {
       this.maxTemp = data;
-    });
+    });*/
   }
 
   ngOnDestroy(){
