@@ -3,18 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { WeatherCardComponent } from './pages/weather-card/weather-card.component';
-import { AddCardComponent } from './pages/add-card/add-card.component';
-import { DetailsComponent } from './pages/details/details.component';
+import { AddCardComponent } from './ui/add-card/add-card/add-card.component';
+import { WeatherCardComponent } from './ui/weather-card/weather-card/weather-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    WeatherCardComponent,
     AddCardComponent,
-    DetailsComponent
+    WeatherCardComponent
   ],
   imports: [
     BrowserModule,

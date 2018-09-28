@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCardComponent implements OnInit {
 
-  constructor() { }
+  darkMode: boolean;
+
+  constructor(public ui: Service) { }
 
   ngOnInit() {
+    this.ui.darkModeState.subscribe((isDark) => {
+      this.darkMode = isDark;
+    });
   }
 
 }
