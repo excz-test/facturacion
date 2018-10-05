@@ -12,6 +12,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { WeatherService } from './services/weather/weather.service';
 import { UiService } from './services/ui.service';
+import { SellComponent } from './pages/sell/sell.component';
+import { FacturaComponent } from './models/factura/factura.component';
+import { ClienteComponent } from './models/cliente/cliente.component';
+import { VentasCardComponent } from './ui/ventas-card/ventas-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { UiService } from './services/ui.service';
     DetailsComponent,
     AddComponent,
     LoginComponent,
-    SingupComponent
+    SingupComponent,
+    SellComponent,
+    FacturaComponent,
+    ClienteComponent,
+    VentasCardComponent
   ],
   imports: [
     BrowserModule,

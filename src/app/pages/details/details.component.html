@@ -43,7 +43,7 @@
     </svg>
   
     <section class="main-weather__card-dark">
-      <section class="card-header__container-dark" [ngSwitch]="true">
+      <section class="card-header__container-dark" [ngSwitch]="darkMode">
   
         <svg *ngSwitchCase="city === 'paris'" class="city__illustration" viewBox="0 0 3000 1000">
           <linearGradient id="a" x1="1487" x2="1487" y1="-11.5" y2="998.5" gradientUnits="userSpaceOnUse">
